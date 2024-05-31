@@ -162,3 +162,4 @@ cython_debug/
 #.idea/
 
 ML_Churn_Pred/
+artifacts/

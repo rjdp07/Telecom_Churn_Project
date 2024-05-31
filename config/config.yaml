@@ -2,6 +2,6 @@ artifacts_root: artifacts
 
 data_ingestion:
   root_dir: artifacts/data_ingestion
-  source_URL: https://www.kaggle.com/datasets/abhinav89/telecom-customer/download
+  source_URL: https://github.com/rjdp07/churn_data_repo/raw/master/churn_dataset.zip
   local_data_file: artifacts/data_ingestion/data.zip
   unzip_dir: artifacts/data_ingestion

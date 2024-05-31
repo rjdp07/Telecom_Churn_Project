@@ -1,3 +1,16 @@
 from src.churnPrediction import logger
+from churnPrediction.pipeline.stage_01_data_ingestion import DataIngestionTrainingPipeline
 
-logger.info("Logging here!")
+
+
+STAGE_NAME = "Data Ingestion Stage"
+
+try:
+    logger.info(f">>>>> {STAGE_NAME} started <<<<<<")
+    data_ingestion = DataIngestionTrainingPipeline()
+    data_ingestion.main()
+    logger.info(f">>>>>> {STAGE_NAME} completed <<<<<<\n\nx=============x")
+
+except Exception as e:
+    logger.exception(e)
+    raise e
