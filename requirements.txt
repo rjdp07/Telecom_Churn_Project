@@ -16,4 +16,5 @@ kaggle
 seaborn
 openpyxl
 plotnine
+imbalanced-learn
 -e .
