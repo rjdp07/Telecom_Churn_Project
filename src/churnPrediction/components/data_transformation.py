@@ -17,11 +17,14 @@ class DataTransformation:
         self.raw_data = pd.read_excel(self.config.data_path)
 
     def ColumnConvert(self):
-
+        #Convert SeniorCitizen Column into Category
         self.raw_data["SeniorCitizen"] = self.raw_data["SeniorCitizen"].astype('category')
-
+        #Change empty cell of TotalCharges column into 0
         self.raw_data["TotalCharges"] = np.where(self.raw_data["TotalCharges"] == " ","0",self.raw_data["TotalCharges"])
+        #Convert TotalCharges to float type column
         self.raw_data["TotalCharges"] = self.raw_data["TotalCharges"].astype("float")
+        #Convert Churn column into int column (1,0)
+        self.raw_data.Churn.replace(('Yes','No'), (1,0),inplace=True)
         logger.info("Converting Columns to Correct Data Format")
 
     def XYDataSets(self):
@@ -62,14 +65,20 @@ class DataTransformation:
         data = self.raw_data
         X_train, X_test, y_train, y_test = train_test_split(self.X_smote, self.y_smote, test_size = 0.3, random_state=720)
 
-        #X_train.to_csv(os.path.join(self.config.root_dir,"X_train.csv"), index = False)
-        np.savetxt(os.path.join(self.config.root_dir,"X_train.csv"), X_train, delimiter=",", fmt='%s')
+        X_train_pd = pd.DataFrame(X_train)
+        X_train_pd.to_csv(os.path.join(self.config.root_dir,"X_train.csv"), index = False)
         #X_test.to_csv(os.path.join(self.config.root.dir,"X_test.csv"), index = False)
-        np.savetxt(os.path.join(self.config.root_dir,"X_test.csv"), X_test, delimiter=",", fmt='%s')
+        #np.savetxt(os.path.join(self.config.root_dir,"X_test.csv"), X_test, delimiter=",", fmt='%s')
+        X_test_pd = pd.DataFrame(X_test)
+        X_test_pd.to_csv(os.path.join(self.config.root_dir,"X_test.csv"), index = False)
         #y_train.to_csv(os.path.join(self.config.root.dir,"y_train.csv"), index = False)
-        np.savetxt(os.path.join(self.config.root_dir,"y_train.csv"), y_train, delimiter=",", fmt='%s')
+        #np.savetxt(os.path.join(self.config.root_dir,"y_train.csv"), y_train, delimiter=",", fmt='%s')
+        y_train_pd = pd.DataFrame(y_train)
+        y_train_pd.to_csv(os.path.join(self.config.root_dir,"y_train.csv"), index = False)
         #y_test.to_csv(os.path.join(self.config.root.dir,"y_test.csv"), index = False)
-        np.savetxt(os.path.join(self.config.root_dir,"y_test.csv"), y_test, delimiter=",", fmt='%s')
+        #np.savetxt(os.path.join(self.config.root_dir,"y_test.csv"), y_test, delimiter=",", fmt='%s')
+        y_test_pd = pd.DataFrame(y_test)
+        y_test_pd.to_csv(os.path.join(self.config.root_dir,"y_test.csv"), index = False)
 
         logger.info("Splitted data into training and test sets")
         logger.info(X_train.shape)

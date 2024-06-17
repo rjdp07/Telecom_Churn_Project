@@ -17,4 +17,5 @@ seaborn
 openpyxl
 plotnine
 imbalanced-learn
+xgboost
 -e .
