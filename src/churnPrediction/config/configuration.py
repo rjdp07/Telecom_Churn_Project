@@ -1,6 +1,6 @@
 from churnPrediction.constants import *
 from churnPrediction.utils.common import read_yaml, create_directories
-from churnPrediction.entity.config_entity import DataIngestionConfig, DataValidationConfig, DataTransformationConfig
+from churnPrediction.entity.config_entity import DataIngestionConfig, DataValidationConfig, DataTransformationConfig, ModelTrainerConfig
 
 class ConfigurationManager:
     def __init__(
@@ -53,3 +53,27 @@ class ConfigurationManager:
                 data_path = config.data_path
           )
           return data_transformation_config
+    
+    def get_model_trainer_config(self) -> ModelTrainerConfig:
+        config = self.config.model_trainer
+        params = self.params.XGB
+        schema = self.schema.TARGET_COLUMN
+
+        create_directories([config.root_dir])
+
+        model_trainer_config = ModelTrainerConfig(
+            root_dir = config.root_dir,
+            Xtrain_data_path = config.Xtrain_data_path,
+            Xtest_data_path = config.Xtest_data_path,
+            ytrain_data_path = config.ytrain_data_path,
+            ytest_data_path = config.ytest_data_path,
+            model_name = config.model_name,
+            colsample_bytree = params.colsample_bytree,
+            gamma = params.gamma,
+            learning_rate = params.learning_rate,
+            max_depth = params.max_depth,
+            min_child_weight = params.min_child_weight,
+            target_column = schema.name
+        )
+
+        return model_trainer_config
