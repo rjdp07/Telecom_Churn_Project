@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/rayjohndp/Desktop/Projects/DS_Python_Portfolio/Telecom_Churn_Project/mlruns/0/c93f6ed5973b42448d997ef6832b8d18/artifacts
+end_time: 1718862577992
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: c93f6ed5973b42448d997ef6832b8d18
+run_name: unique-croc-107
+run_uuid: c93f6ed5973b42448d997ef6832b8d18
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1718862577953
+status: 3
+tags: []
+user_id: rayjohndp

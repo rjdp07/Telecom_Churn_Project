@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/rayjohndp/Desktop/Projects/DS_Python_Portfolio/Telecom_Churn_Project/mlruns/0/4d51975266be4d1694b33b3d62ff3a2a/artifacts
+end_time: 1718864165255
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 4d51975266be4d1694b33b3d62ff3a2a
+run_name: ambitious-moose-302
+run_uuid: 4d51975266be4d1694b33b3d62ff3a2a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1718864165219
+status: 3
+tags: []
+user_id: rayjohndp

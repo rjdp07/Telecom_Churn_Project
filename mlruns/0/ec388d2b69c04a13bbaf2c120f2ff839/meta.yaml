@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/rayjohndp/Desktop/Projects/DS_Python_Portfolio/Telecom_Churn_Project/mlruns/0/ec388d2b69c04a13bbaf2c120f2ff839/artifacts
+end_time: 1718864090810
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: ec388d2b69c04a13bbaf2c120f2ff839
+run_name: flawless-lynx-931
+run_uuid: ec388d2b69c04a13bbaf2c120f2ff839
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1718864086271
+status: 3
+tags: []
+user_id: rayjohndp

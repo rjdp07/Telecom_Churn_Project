@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/rayjohndp/Desktop/Projects/DS_Python_Portfolio/Telecom_Churn_Project/mlruns/0/7f5618cfe4794316a2f1347c9154765f/artifacts
+end_time: 1718866660823
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 7f5618cfe4794316a2f1347c9154765f
+run_name: dashing-turtle-973
+run_uuid: 7f5618cfe4794316a2f1347c9154765f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1718866660772
+status: 3
+tags: []
+user_id: rayjohndp
